@@ -2,7 +2,7 @@
 ```
 docker build \
 --tag sonarr \
-https://github.com/iVirus/Docker.git#master:Sonarr
+https://github.com/iVirus/Docker-Sonarr.git
 ```
 
 ### Run
