@@ -2,6 +2,7 @@
 docker run \
 --rm \
 --detach \
+--init \
 --name sonarr \
 --network backend \
 --volume /mnt/sonarr:/data \
