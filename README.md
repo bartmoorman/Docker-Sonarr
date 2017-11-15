@@ -5,7 +5,7 @@ docker run \
 --init \
 --name sonarr \
 --hostname sonarr \
---volume sonarr-data:/data \
+--volume sonarr-config:/config \
 --volume /mnt/media:/media \
 --volume sabnzbd-data:/sabnzbd-data \
 --volume transmission-public-data:/transmission-public-data \

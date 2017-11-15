@@ -14,7 +14,7 @@ RUN echo 'deb http://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr
 
 COPY sonarr/ /etc/sonarr/
 
-VOLUME /data
+VOLUME /config
 
 EXPOSE 8989
 
