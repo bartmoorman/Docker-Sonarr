@@ -12,8 +12,10 @@ RUN echo 'deb http://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr
  && apt-get clean \
  && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+COPY sonarr/ /etc/sonarr/
+
 VOLUME /data
 
 EXPOSE 8989
 
-CMD ["mono", "/opt/NzbDrone/NzbDrone.exe", "--nobrowser", "--data=/data"]
+CMD ["/etc/sonarr/start.sh"]
