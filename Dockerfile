@@ -1,5 +1,7 @@
 FROM bmoorman/ubuntu:xenial
 
+ENV SONARR_PORT="8989"
+
 ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN echo 'deb http://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr.list \
@@ -17,8 +19,8 @@ COPY sonarr/ /etc/sonarr/
 
 VOLUME /config
 
-EXPOSE 8989
+EXPOSE ${SONARR_PORT}
 
 CMD ["/etc/sonarr/start.sh"]
 
-HEALTHCHECK --interval=60s --timeout=5s CMD curl --silent --location --fail http://localhost:8989/ > /dev/null || exit 1
+HEALTHCHECK --interval=60s --timeout=5s CMD curl --head --insecure --silent --show-error --fail "http://localhost:${SONARR_PORT}/" || exit 1
