@@ -1,4 +1,4 @@
-FROM bmoorman/ubuntu:xenial
+FROM bmoorman/ubuntu:bionic
 
 ENV SONARR_PORT="8989"
 
@@ -9,7 +9,7 @@ RUN echo 'deb http://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr
  && apt-get update \
  && apt-get install --yes --no-install-recommends \
     curl \
-    libcurl3 \
+    libcurl4 \
     nzbdrone \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
