@@ -6,6 +6,8 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN echo 'deb http://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC \
+ && echo 'deb https://download.mono-project.com/repo/ubuntu stable-bionic main' > /etc/apt/sources.list.d/mono-official-stable.list \
+ && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D3D831EF \
  && apt-get update \
  && apt-get install --yes --no-install-recommends \
     curl \
