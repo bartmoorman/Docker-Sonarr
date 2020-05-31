@@ -4,7 +4,7 @@ ENV SONARR_PORT="8989"
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-RUN echo 'deb http://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr.list \
+RUN echo 'deb https://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EFD15863FDA5DFFC \
  && echo 'deb https://download.mono-project.com/repo/ubuntu stable-bionic main' > /etc/apt/sources.list.d/mono-official-stable.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6A19B38D3D831EF \
