@@ -3,6 +3,7 @@
 docker run \
 --detach \
 --name sonarr \
+--restart unless-stopped \
 --publish 8989:8989 \
 --volume sonarr-config:/config \
 --volume /mnt/media:/mnt/media \
@@ -18,6 +19,7 @@ services:
   sonarr:
     image: bmoorman/sonarr:latest
     container_name: sonarr
+    restart: unless-stopped
     ports:
       - "8989:8989"
     volumes:
@@ -31,3 +33,8 @@ volumes:
   sabnzbd-data:
   transmission-data
 ```
+
+### Environment Variables
+|Variable|Description|Default|
+|--------|-----------|-------|
+|TZ|Sets the timezone|`America/Denver`|

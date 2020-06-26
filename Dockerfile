@@ -1,8 +1,8 @@
 FROM bmoorman/ubuntu:bionic
 
-ENV SONARR_PORT="8989"
+ARG DEBIAN_FRONTEND=noninteractive
 
-ARG DEBIAN_FRONTEND="noninteractive"
+ENV SONARR_PORT=8989
 
 RUN echo 'deb https://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EFD15863FDA5DFFC \
