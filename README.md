@@ -31,7 +31,7 @@ services:
 volumes:
   sonarr-config:
   sabnzbd-data:
-  transmission-data
+  transmission-data:
 ```
 
 ### Environment Variables
