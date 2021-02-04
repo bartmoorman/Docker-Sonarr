@@ -1,12 +1,11 @@
-FROM bmoorman/ubuntu:bionic
-
+FROM bmoorman/ubuntu:focal
 ARG DEBIAN_FRONTEND=noninteractive
 
 ENV SONARR_PORT=8989
 
 RUN echo 'deb https://apt.sonarr.tv master main' > /etc/apt/sources.list.d/sonarr.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EFD15863FDA5DFFC \
- && echo 'deb https://download.mono-project.com/repo/ubuntu stable-bionic main' > /etc/apt/sources.list.d/mono-official-stable.list \
+ && echo 'deb https://download.mono-project.com/repo/ubuntu stable-focal main' > /etc/apt/sources.list.d/mono-official-stable.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6A19B38D3D831EF \
  && apt-get update \
  && apt-get install --yes --no-install-recommends \
