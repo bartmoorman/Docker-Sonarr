@@ -1,5 +1,5 @@
 #!/bin/bash
 exec $(which mono) \
-    /opt/NzbDrone/NzbDrone.exe \
+    /usr/lib/sonarr/bin/Sonarr.exe \
     --data=/config \
     --nobrowser
