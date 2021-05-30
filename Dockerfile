@@ -11,7 +11,6 @@ RUN echo 'deb https://apt.sonarr.tv/ubuntu focal main' > /etc/apt/sources.list.d
  && apt-get update \
  && apt-get install --yes --no-install-recommends \
     ca-certificates-mono \
-    curl \
     libcurl4 \
     sonarr \
  && apt-get autoremove --yes --purge \
