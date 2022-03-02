@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 ENV SONARR_PORT=8989
 
-RUN echo 'deb https://apt.sonarr.tv/ubuntu focal main' > /etc/apt/sources.list.d/sonarr.list \
+RUN echo 'deb https://apt.sonarr.tv/ubuntu focal-main main' > /etc/apt/sources.list.d/sonarr.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1F4F90DE2A9B4BF8 \
  && echo 'deb https://download.mono-project.com/repo/ubuntu stable-focal main' > /etc/apt/sources.list.d/mono-official-stable.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6A19B38D3D831EF \
